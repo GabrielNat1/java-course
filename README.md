@@ -25,7 +25,7 @@ You will find:
 ## Classes
 
 Here you can access the lessons organized by topic and content.  
-[Click here to see the classes](./docs/lessons)  
+[Click here to see the classes](./docs/lessons.md)  
 
 ---
 
