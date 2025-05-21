@@ -34,10 +34,11 @@ Here you can access the lessons organized by topic and content.
 Contributions are very welcome! If you want to help improve this repository, please follow these guidelines:
 
 - Open an **issue** to suggest improvements, report bugs, or ask questions.  
-- Fork the repository and create a **branch** for your modification:  
-  aaaaaaaaaaaaaaaa  
+- Fork the repository and create a **branch** for your modification:
+  
+  ```bash
   git checkout -b my-new-feature  
-  aaaaaaaaaaaaaaaa  
+  ``` 
 - Make your changes with clear, organized commits.  
 - Submit a **pull request** explaining the changes you made.
 
