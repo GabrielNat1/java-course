@@ -19,4 +19,29 @@ public class Calculadora {
         }
         return (int) (num1/num2);
     }
+
+    public int divide02(double num1, double num2){
+        if (num2 != 0){
+            return (int) (num1/num2);
+        }
+        return 0;
+    }
+
+    public void imprimedivisao(double num1, double num2){
+        if (num2 == 0){
+            System.out.println("não existe divisão por zero");
+            return;
+        }
+
+        System.out.println(num1 / num2);
+    }
+
+    public void alteradoisnumeros(int numero1, int numero2){
+        numero2 = 50;
+        numero1 = 20;
+        System.out.println("\n----------------------");
+        System.out.println("dentro do altera dois numeros");
+        System.out.println("num1: "+numero1);
+        System.out.println("num2 "+numero2);
+    }
 }
