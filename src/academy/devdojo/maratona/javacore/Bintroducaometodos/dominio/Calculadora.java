@@ -44,4 +44,12 @@ public class Calculadora {
         System.out.println("num1: "+numero1);
         System.out.println("num2 "+numero2);
     }
+
+    public void somaArray(int[] numeros){
+        int soma = 0;
+        for(int num: numeros){
+            suma += num;
+            System.out.println(soma);
+        }
+    }
 }
