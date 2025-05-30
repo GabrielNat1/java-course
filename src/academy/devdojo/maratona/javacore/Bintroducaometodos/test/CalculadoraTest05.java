@@ -8,5 +8,6 @@ public class CalculadoraTest05 {
         int[] numeros = {1, 2, 3, 4, 5};
 
         calculadora.somaArray(numeros);
+        calculadora.somaVarArgs(1, 2, 3, 4, 5);
     }
 }
