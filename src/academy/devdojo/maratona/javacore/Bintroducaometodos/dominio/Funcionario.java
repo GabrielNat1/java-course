@@ -11,10 +11,10 @@ public class Funcionario {
     public int idade;
     public double[] salario;
 
-    public void imprimirDados(){
+    public void imprimirDados() {
         System.out.println("-------------------");
-        System.out.println("nome: "+this.nome);
-        System.out.println("idade: "+this.idade);
+        System.out.println("nome: " + this.nome);
+        System.out.println("idade: " + this.idade);
         if (salario != null && salario.length == 3) {
             for (int i = 0; i < salario.length; i++) {
                 System.out.println("Salário " + (i + 1) + ": R$ " + salario[i]);
@@ -24,13 +24,27 @@ public class Funcionario {
         }
     }
 
-    public void calcularMediaSalarios(){
-        if (this.salario != null && this.salario.length == 3) {
+    public void calcularMediaSalariosBD() {
+        if (salario != null && salario.length == 3) {
             BigDecimal soma = BigDecimal.ZERO;
-            for (double s : this.salario) {
+            for (double s : salario) {
                 soma = soma.add(BigDecimal.valueOf(s));
             }
             BigDecimal media = soma.divide(BigDecimal.valueOf(3), 2, RoundingMode.HALF_UP);
+            System.out.println("Média salarial: R$ " + media);
+            System.out.println("-------------------");
+        } else {
+            System.out.println("Não é possível calcular a média. O funcionário deve ter 3 salários.");
+        }
+    }
+
+    public void calcularMediaSalarios() {
+        if (this.salario != null && this.salario.length == 3) {
+            double soma = 0;
+            for (double s : this.salario) {
+                soma += s;
+            }
+            double media = soma / 3;
             System.out.println("Média salarial: R$ " + media);
             System.out.println("-------------------");
         } else {
