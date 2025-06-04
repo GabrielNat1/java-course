@@ -1,6 +1,6 @@
-# Java Marathon
+# Maratona Java
 
-Welcome to the **Java Marathon** course repository! 🎉
+Welcome to the **Java Maratona** course repository! 🎉
 
 This repository contains exercises, examples, projects, and notes for those learning Java from basics to advanced concepts.
 
