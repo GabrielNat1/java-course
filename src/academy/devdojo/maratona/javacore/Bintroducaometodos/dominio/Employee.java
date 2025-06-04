@@ -14,8 +14,8 @@ public class Employee {
 
     public void printHeader(){
         System.out.println("--------------");
-        System.out.println("name: "+getName());
-        System.out.println("year: "+getYear());
+        System.out.println("name: "+ getName());
+        System.out.println("year: "+ getYear());
     }
 
     public void setName(String name){
