@@ -10,10 +10,9 @@ public class HerancaTest01 {
         endereco.setRua("rua 21");
         endereco.setCep("12345-678");
 
-        Pessoa pessoa = new Pessoa();
+        Pessoa pessoa = new Pessoa("João");
 
         System.out.println("------------------");
-        pessoa.setNome("João");
         pessoa.setCpf("332320");
         pessoa.setEndereco(endereco);
 
@@ -21,8 +20,8 @@ public class HerancaTest01 {
 
         System.out.println("------------------");
 
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("funcionario1");
+        Funcionario funcionario = new Funcionario("funcionario1");
+
         funcionario.setCpf("123456789");
         funcionario.setEndereco(endereco);
         funcionario.setSalario(2000.0);
