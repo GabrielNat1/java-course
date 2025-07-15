@@ -5,6 +5,14 @@ public class Pessoa {
     protected String cpf;
     protected Endereco endereco;
 
+    static {
+        System.out.println("Bloco de inicialização estático da classe Pessoa");
+    }
+
+    {
+        System.out.println("Bloco de inicialização não estático da classe Pessoa");
+    }
+
     public Pessoa(String nome){
         this.nome = nome;
     }

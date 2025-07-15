@@ -4,6 +4,14 @@ package academy.devdojo.maratona.javacore.Hheranca.dominio;
 public class Funcionario extends Pessoa {
     private double salario;
 
+    static {
+        System.out.println("Bloco de inicialização estático da classe Funcionario");
+    }
+
+    {
+        System.out.println("Bloco de inicialização não estático da classe Funcionario");
+    }
+
     public Funcionario(String nome) {
         super(nome);
     }
