@@ -1,9 +1,9 @@
 package academy.devdojo.maratona.javacore.Kenum.domain;
 
 public class Client {
-    private String name;
-    private TypeClient type;
-    private TypePayment typePayment;
+    private final String name;
+    private final TypeClient type;
+    private final TypePayment typePayment;
 
     public Client(String name, TypeClient type, TypePayment typePayment) {
         this.name = name;
