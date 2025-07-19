@@ -11,6 +11,11 @@ public class Manager extends Employee{
     }
 
     @Override
+    public void print() {
+        super.print();
+    }
+
+    @Override
     public String toString() {
         return "Manager{" +
                 "name='" + name + '\'' +

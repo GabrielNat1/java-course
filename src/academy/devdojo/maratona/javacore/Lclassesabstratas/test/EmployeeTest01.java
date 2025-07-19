@@ -10,5 +10,8 @@ public class EmployeeTest01 {
         Developer developer = new Developer("Goku", 8000);
         System.out.println(manager);
         System.out.println(developer);
+
+        manager.print();
+        developer.print();
     }
 }

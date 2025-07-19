@@ -11,6 +11,11 @@ public class Developer extends Employee{
     }
 
     @Override
+    public void print() {
+        super.print();
+    }
+
+    @Override
     public String toString() {
         return "Developer{" +
                 "name='" + name + '\'' +
