@@ -6,6 +6,7 @@ import academy.devdojo.maratona.javacore.Npolimorfismo.service.TaxCalculate;
 
 public class ProductTest01 {
     public static void main(String[] args) {
+
         Desktop desktop = new Desktop("Desktop Gamer", 5000);
         Tomato tomato = new Tomato("Tomato", 10);
 
