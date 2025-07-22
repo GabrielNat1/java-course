@@ -9,22 +9,20 @@ public class RuntimeExceptionTest04 {
     private static final Logger logger = Logger.getLogger(RuntimeExceptionTest04.class.getName());
 
     public static void main(String[] args) {
-        try{
+        try {
             throw new ArrayIndexOutOfBoundsException();
-        } catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticException e) {
             logger.log(Level.SEVERE, "Array index out of bounds exception occurred", e);
-        } catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             logger.log(Level.SEVERE, "Index out of bounds exception occurred", e);
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             logger.log(Level.SEVERE, "An unexpected exception occurred", e);
         }
 
-        try{
+        try {
             maybeLaunchException();
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, "SQL exception occurred", e);
-        } catch (FileNotFoundException e){
-            logger.log(Level.SEVERE, "File not found exception occurred", e);
+        } catch (SQLException | FileNotFoundException e) {
+            logger.log(Level.SEVERE, "exception occurred", e);
         }
     }
 
