@@ -19,7 +19,7 @@ public class TryWithResourcesTest01 {
             Reader02 reader02 = new Reader02()){
 
         } catch (IOException e){
-
+            logger.log(Level.SEVERE, "exception: ", e);
         }
     }
 
