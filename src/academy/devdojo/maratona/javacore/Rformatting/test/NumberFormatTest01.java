@@ -1,4 +1,4 @@
-package academy.devdojo.maratona.Rformatting.test;
+package academy.devdojo.maratona.javacore.Rformatting.test;
 
 import java.text.NumberFormat;
 import java.util.Locale;
