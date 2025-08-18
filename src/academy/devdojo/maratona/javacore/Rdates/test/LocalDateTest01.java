@@ -11,7 +11,7 @@ public class LocalDateTest01 {
         System.out.println(new Date());
         System.out.println(Calendar.getInstance());
         System.out.println(Month.JANUARY.getValue());
-        LocalDate date = LocalTime.from(LocalDate.of(2025, Month.JANUARY, 27));
+        LocalDate date = LocalDate.of(2025, Month.JANUARY, 27);
         System.out.println(date);
         System.out.println(date.getYear());
         System.out.println(date.getMonthValue());
