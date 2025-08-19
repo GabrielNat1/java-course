@@ -25,7 +25,7 @@ public class ZoneTest01 {
         System.out.println(ZoneOffset.MAX);
 
         ZoneOffset offsetManaus = ZoneOffset.of("-04:00");
-        ZoneOffset offSetDataTime1 = now.atOffset(zoneOffsetManaus).getOffset();
+        ZoneOffset offSetDataTime1 = now.atOffset(offsetManaus).getOffset();
         System.out.println(offSetDataTime1);
         OffsetDateTime offsetDateTime2 = OffsetDateTime.of(now, offsetManaus);
         System.out.println(offsetDateTime2);
