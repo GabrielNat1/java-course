@@ -35,7 +35,7 @@ public class DataFormatterTest01 {
         String formatBR = LocalDate.now().format(formatterBR);
         System.out.println(formatBR);
 
-        LocalDateTime parseBR = LocalDate.parse("20/08/2025", formatterBR);
+        LocalDateTime parseBR = LocalDate.parse("20/08/2025", formatterBR).atStartOfDay();
         System.out.println(parseBR);
     }
 }
