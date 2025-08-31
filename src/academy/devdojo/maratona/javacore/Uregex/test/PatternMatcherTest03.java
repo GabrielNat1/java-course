@@ -12,10 +12,16 @@ public class PatternMatcherTest03 {
         // \w = a–z, A–Z, digits, _
         // \W = Everything not included in \w
         // []
+        // ? Zero or one
+        // * Zero or more
+        // + One or more
+        // {n,m} n a m
+        // ( ) Agrouping character
+        // | or
+        // $ End of line
 
-        //String regex = "[a-zA-C]";
-        String regex = "0[xX][0-9a-fA-F]";
-        String text = "12 0x 0X 0xFFABC 0x109 0x1";
+        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
+        String text = "12 0x 0X 0xFFABC 0x10G 0x1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
         System.out.println("text: " +matcher);
@@ -27,7 +33,6 @@ public class PatternMatcherTest03 {
             System.out.println(matcher.start() + " " + matcher.group() + "\n");
         }
 
-        //int numberHex = 0X59F86A;
-        //System.out.println(numberHex);
+
     }
 }
