@@ -18,6 +18,5 @@ public class FileWriterTest01 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
