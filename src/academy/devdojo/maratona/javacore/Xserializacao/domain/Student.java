@@ -1,16 +1,45 @@
 package academy.devdojo.maratona.javacore.Xserializacao.domain;
 
-import java.io.Serializable;
+import java.io.*;
+import java.util.logging.Level;
+
 
 public class Student implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -5818123809357761522L;
+
     private Long id;
     private String name;
-    private String password;
+    private transient String password;
+    private static final String SCHOOL_NAME = "schoolTest";
+    private transient Classroom aClassroom;
 
     public Student(Long id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
+    }
+
+    @Serial
+    public void writeObject(ObjectOutputStream oos){
+        try{
+            oos.defaultWriteObject();
+            oos.writeUTF(aClassroom.getName());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    @Serial
+    public void readObject(ObjectInputStream ois){
+        try{
+            ois.defaultReadObject();
+            String nameClassroom = ois.readUTF();
+            aClassroom = new Classroom(nameClassroom);
+
+        }catch (IOException | ClassNotFoundException ex){
+            ex.printStackTrace();
+        }
     }
 
     @Override
@@ -19,7 +48,17 @@ public class Student implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", SCHOOL NAME='" + SCHOOL_NAME + '\'' +
+                ", class='" + aClassroom + '\'' +
                 '}';
+    }
+
+    public Classroom getaClass() {
+        return aClassroom;
+    }
+
+    public void setaClass(Classroom aClassroom) {
+        this.aClassroom = aClassroom;
     }
 
     public Long getId() {
