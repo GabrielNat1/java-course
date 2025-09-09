@@ -1,5 +1,6 @@
 package academy.devdojo.maratona.javacore.Xserializacao.test;
 
+import academy.devdojo.maratona.javacore.Xserializacao.domain.Classroom;
 import academy.devdojo.maratona.javacore.Xserializacao.domain.Student;
 
 import java.io.ObjectInputStream;
@@ -10,8 +11,9 @@ import java.nio.file.Paths;
 
 public class SerializationTest01 {
     public static void main(String[] args) {
-        Student student = new Student("1L", "Gabriel", "123456");
-        //System.out.println(student);
+        Student student = new Student(1L, "Gabriel", "123456");
+        Classroom classroom1 = new Classroom("class1");
+        student.setaClass(classroom1);
         //serialization(student);
         deserialization();
     }
