@@ -25,7 +25,7 @@ import java.util.Scanner;
             local: endereço
          */
 
-public class AssociacaoTest {
+/*public class AssociacaoTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -138,3 +138,4 @@ public class AssociacaoTest {
         } while (opcao != 0);
     }
 }
+*/

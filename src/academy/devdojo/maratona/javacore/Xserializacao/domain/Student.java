@@ -5,7 +5,6 @@ import java.util.logging.Level;
 
 
 public class Student implements Serializable {
-    @Serial
     private static final long serialVersionUID = -5818123809357761522L;
 
     private Long id;
@@ -20,7 +19,6 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-    @Serial
     public void writeObject(ObjectOutputStream oos){
         try{
             oos.defaultWriteObject();
@@ -30,7 +28,6 @@ public class Student implements Serializable {
         }
     }
 
-    @Serial
     public void readObject(ObjectInputStream ois){
         try{
             ois.defaultReadObject();
