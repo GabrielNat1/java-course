@@ -24,6 +24,11 @@ public class SmartPhone {
         return serialNumber != null && serialNumber.equals(smartPhone.serialNumber);
     }
 
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : this.serialNumber.hashCode();
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }
