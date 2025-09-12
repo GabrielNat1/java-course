@@ -6,9 +6,13 @@ import java.util.List;
 public class ListTest01 {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>(16);
+        List<String> names2 = new ArrayList<>(16);
         names.add("person 1");
         names.add("person 2");
-        names.add(String.valueOf(121212));
+        names2.add("person 1");
+        names2.add("person 2");
+
+        names.addAll(names2);
 
         for (String name : names){
             System.out.println(name);
@@ -19,6 +23,9 @@ public class ListTest01 {
         for (int i = 0; i < names.size(); i++) {
             System.out.println(names.get(i));
         }
+
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
 
     }
 }
