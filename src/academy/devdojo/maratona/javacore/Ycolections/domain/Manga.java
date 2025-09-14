@@ -2,7 +2,7 @@ package academy.devdojo.maratona.javacore.Ycolections.domain;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga>{
     private Long id;
     private String name;
     private double price;
@@ -58,5 +58,18 @@ public class Manga {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public int compareTo(Manga o) {
+//        if (this.id < o.getId()){
+//            return -1;
+//        } else if (this.id.equals(o.getId())){
+//            return 0;
+//        } else {
+//            return 1;
+//        }
+
+        return this.id.compareTo(o.getId());
     }
 }
