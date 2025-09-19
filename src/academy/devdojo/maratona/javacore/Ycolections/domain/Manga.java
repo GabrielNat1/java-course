@@ -22,18 +22,6 @@ public class Manga implements Comparable<Manga>{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Manga manga = (Manga) o;
-        return Double.compare(price, manga.price) == 0 && Objects.equals(id, manga.id) && Objects.equals(name, manga.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, price);
-    }
-
-    @Override
     public String toString() {
         return "Manga{" +
                 "id=" + id +
@@ -41,6 +29,18 @@ public class Manga implements Comparable<Manga>{
                 ", price=" + price +
                 ", amount=" + amount +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Manga manga = (Manga) o;
+        return Objects.equals(id, manga.id) && Objects.equals(name, manga.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 
     public int getAmount() {
