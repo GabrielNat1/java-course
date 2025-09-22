@@ -2,7 +2,7 @@ package academy.devdojo.maratona.javacore.Ycolections.domain;
 
 import java.util.Objects;
 
-public class SmartPhone {
+public class SmartPhone extends Manga {
     private String serialNumber;
     private String brand;
 

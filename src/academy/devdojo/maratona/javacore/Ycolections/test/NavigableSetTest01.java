@@ -23,14 +23,14 @@ class MangaPriceComparator implements Comparator<Manga> {
 
 public class NavigableSetTest01 {
     public static void main(String[] args) {
-        NavigableSet<SmartPhone> set = new TreeSet<>(new MangaPriceComparator());
-        SmartPhone s1 = new SmartPhone("231", "nokia");
-        set.add(s1);
-        System.out.println(set);
+//        NavigableSet<Manga> set = new TreeSet<>(new MangaPriceComparator());
+//        SmartPhone s1 = new SmartPhone("231", "nokia");
+//        set.add(s1);
+//        System.out.println(set);
 
         System.out.println("----------------------------");
 
-        NavigableSet<Manga> mangas = new TreeSet<>();
+        NavigableSet<Manga> mangas = new TreeSet<>(new MangaPriceComparator());
         mangas.add(new Manga(1L, "B manga1", 19.99));
         mangas.add(new Manga(3L, "T manga2", 321.31));
         mangas.add(new Manga(7L, "D manga3", 412.2));
