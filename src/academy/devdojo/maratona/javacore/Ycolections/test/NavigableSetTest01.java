@@ -14,9 +14,16 @@ class SmartPhoneBrandComparator implements Comparator<SmartPhone> {
     }
 }
 
+class MangaPriceComparator implements Comparator<Manga> {
+    @Override
+    public int compare(Manga o1, Manga o2) {
+        return Double.compare(o1.getPrice(), o2.getPrice());
+    }
+}
+
 public class NavigableSetTest01 {
     public static void main(String[] args) {
-        NavigableSet<SmartPhone> set = new TreeSet<>(new SmartPhoneBrandComparator());
+        NavigableSet<SmartPhone> set = new TreeSet<>(new MangaPriceComparator());
         SmartPhone s1 = new SmartPhone("231", "nokia");
         set.add(s1);
         System.out.println(set);
@@ -34,5 +41,12 @@ public class NavigableSetTest01 {
         for(Manga manga : mangas){
             System.out.println(manga);
         }
+
+        // lower <
+        // floor <=
+        // higher >
+        // ceiling >=
+        // poolFirst return first element and remove
+        // poolLast return last element and remove
     }
 }
