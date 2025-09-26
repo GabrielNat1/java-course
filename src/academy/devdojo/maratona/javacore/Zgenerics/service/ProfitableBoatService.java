@@ -24,6 +24,6 @@ public class ProfitableBoatService {
         System.out.println("returning Boat " + boat);
         boatAvailable.add(boat);
         System.out.println("Boats available for rent:");
-        System.out.println(Available);
+        System.out.println(boatAvailable);
     }
 }
