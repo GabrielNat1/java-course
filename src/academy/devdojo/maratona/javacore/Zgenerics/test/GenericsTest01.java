@@ -7,7 +7,7 @@ import java.util.List;
 
 public class GenericsTest01 {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>(6);
         list.add("Midoriya");
         list.add("Midoriya");
 
