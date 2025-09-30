@@ -10,15 +10,28 @@ public class OptionalTest02 {
         Optional<Manga> mangaByTitle = MangaRepository.findyByTitle("berserk");
         mangaByTitle.ifPresent(m -> m.setTitle("berserk 2"));
         System.out.println(mangaByTitle);
+        System.out.println("--------------------");
 
         Optional<Manga> mangaById = Optional.ofNullable(
-                MangaRepository.findyById(2)
+                MangaRepository.findyById(0)
                         .orElseThrow(IllegalArgumentException::new));
 
         System.out.println(mangaById);
 
         Manga newManga = MangaRepository.findyByTitle("dragon ball")
-                .orElseGet(() -> new Manga(3, "dragon ball", 43));
+                .orElseGet(() -> new Manga(3, "dragon ball", 43, "action"));
         System.out.println(newManga);
+
+        Optional<Manga> mangaByGenre = Optional.ofNullable(MangaRepository.findByGenre("Dark fantasy")
+                .orElseThrow(IllegalArgumentException::new));
+        System.out.println(mangaByGenre);
+
+        System.out.println("------------------------------------");
+
+        Optional<Manga> mangaByClassification = Optional.ofNullable(MangaRepository.findByClassification(16)
+                .orElseThrow(IllegalArgumentException::new));
+        System.out.println(mangaByClassification);
+
+
     }
 }
