@@ -5,7 +5,6 @@ import academy.devdojo.maratona.javacore.ZZEstreams.domain.LightNovel;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 public class StreamTest06 {
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
