@@ -58,4 +58,6 @@ public class LightNovel {
     public void setPrice(double price) {
         this.price = price;
     }
+
+
 }
