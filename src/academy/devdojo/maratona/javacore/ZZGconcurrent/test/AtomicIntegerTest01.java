@@ -1,14 +1,22 @@
 package academy.devdojo.maratona.javacore.ZZGconcurrent.test;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 class Counter{
     private int count;
     private final AtomicInteger atomicInteger = new AtomicInteger();
+    private Lock lock = new ReentrantLock(true);
 
     void increment(){
-        count++;
-        atomicInteger.getAndIncrement();
+        lock.lock();
+        try{
+            count++;
+            atomicInteger.getAndIncrement();
+        } finally {
+            lock.unlock();
+        }
     }
 
     public int getCount() {
