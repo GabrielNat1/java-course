@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class CopyOnWriteTest01 {
     public static void main(String[] args) {
         List<Integer> list = new CopyOnWriteArrayList<>();
-        for (int i = 0; i < ; i++) {
+        for (int i = 0; i < 1000; i++) {
             list.add(i);
         }
 
